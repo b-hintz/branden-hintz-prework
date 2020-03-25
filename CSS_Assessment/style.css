@@ -1,4 +1,40 @@
 
+body{
+    text-align: center;
+}
 #navbar{
-    background-color: grey;
+    font-size: 10px;
+    background: grey;
+    top: 0px;
+    width: 100%;
+    margin-bottom: 60px;
+    top: 0px;
+}
+
+
+#left{
+    background: blue;
+    height: 500px;
+    width: 50%;
+    float: left;
+    line-height: 460px;
+}
+#right{
+    background: red;
+    height: 500px;
+    width: 25%;
+    float: right;
+    line-height: 460px;
+}
+
+#footer{
+    font-size: 10px;
+    width: 100%;
+    background: green;
+    height: 20px;
+    clear: both;
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    line-height: 1px;
 }
