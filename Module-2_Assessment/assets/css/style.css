@@ -1,0 +1,24 @@
+body{
+    background-image: url(../images/free-space-background-01.jpg);
+}
+.heading{
+    text-align: center;
+}
+#stats{
+    color: white;
+}
+.attempts{
+    background-color: black;
+    border: solid white 2px;
+}
+
+.picTile{
+    height: 200px;
+    text-align: center;
+}
+#letters{
+    background-color: black;
+    border: solid white 2px;
+    height: 200px;
+
+}
