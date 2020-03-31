@@ -7,10 +7,11 @@
     <div class="heading text-white my-5">
         <h3>HANGMAN</h3>
         <h1>IN OUTER SPACE!</h1>
+        <h2>Wins:</h2><h2 id="wincount">0</h2>
     </div>
     <div class="row mt-5 p-5">
         <div class="col-md-4" id="stats">
-            <h2 class="mb-5" id="winorlose"><span id="attempts" class="h2 attempts">9</span> attempts left before you crash into a star!</h2>
+            <h2 class="mb-5"><span id="attempts" class="h2 attempts">9</span> attempts left before you crash into a star!</h2>
             <h2>Letters Guessed</h2>
             <div id="letters" class="h1 text-center">    
             </div>
@@ -18,19 +19,19 @@
         <div class="col-md-8">
             <div class="row justify-content-center">
             <div class="picTile mb-5">
-                <img alt="space object" style="width: 500px; height: 100%; border: solid white 3px;" src="assets/images/heic0612d.jpg"/>
+                <img alt="space object" style="width: 800px; height: 100%; border: solid white 3px;" src="assets/images/heic0612d.jpg"/>
+            </div>
+            <div id ='winorlose'>
+
             </div>
             </div>
             <div class="row mt-5 justify-content-center">
             <div class="mt-5 word text-white text-center h1"> 
                 <ul id="answer">
 
-                </ul>
-                
-                
+                </ul> 
             </div>
             </div>
-
         </div>
     </div>
     <script src="assets/javascript/game.js"></script>
