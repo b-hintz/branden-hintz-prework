@@ -1,5 +1,5 @@
 body{
-    background-image: url(../images/free-space-background-01.jpg);
+    background-image: url(../images/space.jpg);
 }
 .heading{
     text-align: center;
@@ -7,14 +7,15 @@ body{
 #stats{
     color: white;
 }
-.attempts{
+#answer{
     background-color: black;
     border: solid white 2px;
 }
 
-.picTile{
+#picTile{
     height: 200px;
     text-align: center;
+    margin-bottom: 20px;
 }
 #letters{
     background-color: black;

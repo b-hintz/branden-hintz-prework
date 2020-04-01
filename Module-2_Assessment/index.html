@@ -2,36 +2,43 @@
 <head>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Geo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="heading text-white my-5">
-        <h3>HANGMAN</h3>
-        <h1>IN OUTER SPACE!</h1>
-        <h2>Wins:</h2><h2 id="wincount">0</h2>
-    </div>
-    <div class="row mt-5 p-5">
-        <div class="col-md-4" id="stats">
-            <h2 class="mb-5"><span id="attempts" class="h2 attempts">9</span> attempts left before you crash into a star!</h2>
-            <h2>Letters Guessed</h2>
-            <div id="letters" class="h1 text-center">    
+    <div style="font-family:'Geo', sans-serif">
+        <div class="text-warning text-center mt-5 pl-5">
+            <h1 style="font-size: 90px;">HANGMAN</h1>
+            <h1>IN OUTER SPACE!</h1>
+            <div style="background-color: black; border: solid white 3px; width: 200px; border-radius: 30%; margin: auto;">
+                <h1>Wins:</h1><span id="wincount" class="h1">0</span>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="row mr-5">
+        <div class="col-md-6">
             <div class="row justify-content-center">
-            <div class="picTile mb-5">
-                <img alt="space object" style="width: 800px; height: 100%; border: solid white 3px;" src="assets/images/heic0612d.jpg"/>
+                <div id="picTile" style="width: 600px; height: 500px; border: solid white 3px; border-radius: 50%; overflow: hidden; margin-top: -250px;">
+                    <img id="img" alt="sun" style="width: 100%; height: 100%;" src="assets/images/sun1.jpg"/>
+                </div>
             </div>
-            <div id ='winorlose'>
+            <div class="row justify-content-center">
+                <div id ='winorlose'>
+                
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="word text-warning text-center h1"> 
+                    <ul id="answer" class="justify-content-center mr-5 pr-5">
 
+                    </ul> 
+                </div>
             </div>
+        </div>
+        <div class="col-md-6 mt-5" id="stats">
+            <h1>Letters Guessed</h1>
+            <div id="letters" class="h1 text-center mr-5">    
             </div>
-            <div class="row mt-5 justify-content-center">
-            <div class="mt-5 word text-white text-center h1"> 
-                <ul id="answer">
-
-                </ul> 
-            </div>
-            </div>
+            <h1><span id="attempts" style="font-size: 90px; color: red">9</span> attempts before we crash into the Sun!</h1>
+        </div>
         </div>
     </div>
     <script src="assets/javascript/game.js"></script>
