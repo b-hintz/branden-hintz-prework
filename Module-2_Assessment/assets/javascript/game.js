@@ -18,12 +18,12 @@ const result = document.querySelector('#winorlose');
 const wins = document.querySelector('#wincount');
 let word = "";
 let progress = "";
-answer.innerHTML= '<div class="text-center"><h1>Type Any Key To Begin The Game</h1></div>';
+answer.innerHTML= '<div class="text-center">Type Any Key To Begin Game</div>';
 
 const startGame = ()=>{
   document.removeEventListener('keyup', startGame)
   document.querySelector('#img').src = 'assets/images/sun1.jpg';
-  result.innerHTML = "<div class='text-white text-center p-5'><h1>Guess Word Before We Crash!</h1></div>";
+  result.innerHTML = "<div class='text-white text-center'><h1>Guess Word Before We Crash!</h1></div>";
   answer.innerText = "";
   letter.innerText = "";
   attempts.innerText = 9
