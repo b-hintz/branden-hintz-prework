@@ -1,3 +1,16 @@
 body{
     background-image: url(../images/space.jpg);
 }
+
+@media screen and (max-width: 768px){
+    #picTile{
+        margin-top: -40%;
+    }
+    #winBox{
+        float: right;
+        height: fit-content;
+    }
+    #letters{
+        height: fit-content;
+    }
+}
