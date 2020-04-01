@@ -18,7 +18,7 @@ const result = document.querySelector('#winorlose');
 const wins = document.querySelector('#wincount');
 let word = "";
 let progress = "";
-result.innerHTML= '<div class="text-white text-center p-5"><h1>Type Any Key To Begin The Game</h1></div>';
+answer.innerHTML= '<div class="text-center"><h1>Type Any Key To Begin The Game</h1></div>';
 
 const startGame = ()=>{
   document.removeEventListener('keyup', startGame)
@@ -62,32 +62,32 @@ const addLetter = (event) => {
     answer.innerText += " " + success[i];
   }
   if(success.indexOf(" _") === -1){
-    let audio = new Audio('assets/win.mp3')
+    let audio = new Audio('assets/sounds/win.mp3')
     audio.play();
     answer.innerText = "Press Any Key To Play Again";
     attempts.innerText = 0; 
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU LIVE TO SEE ANOTHER DAY!</h1></div>';
+    result.innerHTML = '<div class="text-white text-center"><h1>YOU LIVE TO SEE ANOTHER DAY!</h1></div>';
     wincount.innerText = parseInt(win) + 1;
     document.removeEventListener('keyup', addLetter);
     document.addEventListener('keyup', startGame);
   } else if(life < 1){
-    let audio = new Audio('assets/lose.wav')
+    let audio = new Audio('assets/sounds/lose.wav')
     audio.play();
     answer.innerText = "Press Any Key To Play Again";
     attempts.innerText = 0; 
     document.querySelector('#img').src = 'assets/images/sun5.jpg';
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU HAVE BEEN VAPORIZED!</h1></div>';
+    result.innerHTML = '<div class="text-white text-danger"><h1>YOU HAVE BEEN VAPORIZED!</h1></div>';
     document.removeEventListener('keyup', addLetter);
     document.addEventListener('keyup', startGame);
   } else if(life < 7 && life > 4){
     document.querySelector('#img').src = 'assets/images/sun2.jpg';
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>UMM... IT"S GETTING HOTTER...</h1></div>';
+    result.innerHTML = '<div class="text-white text-center"><h1>UMM... IT"S GETTING HOTTER...</h1></div>';
   } else if(life < 5 && life > 2){
     document.querySelector('#img').src = 'assets/images/sun3.jpg';
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>OK, YOU ARE RUNNING OUT OF TIME!</h1></div>';
+    result.innerHTML = '<div class="text-white text-center"><h1>OK, YOU ARE RUNNING OUT OF TIME!</h1></div>';
   } else if(life < 3 && life > 1){
     document.querySelector('#img').src = 'assets/images/sun4.jpg';
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>OMG... YOU ARE GUNNA FRY...</h1></div>';
+    result.innerHTML = '<div class="text-white text-center"><h1>OMG... YOU ARE GUNNA FRY...</h1></div>';
   } 
 }
 
