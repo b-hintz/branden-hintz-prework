@@ -64,19 +64,19 @@ const addLetter = (event) => {
   if(success.indexOf(" _") === -1){
     let audio = new Audio('assets/win.mp3')
     audio.play();
+    answer.innerText = "Press Any Key To Play Again";
     attempts.innerText = 0; 
-    answer.innerText = "";
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU LIVE TO SEE ANOTHER DAY!</h1><h2>Press Any Key To Play Again</h2></div>';
+    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU LIVE TO SEE ANOTHER DAY!</h1></div>';
     wincount.innerText = parseInt(win) + 1;
     document.removeEventListener('keyup', addLetter);
     document.addEventListener('keyup', startGame);
   } else if(life < 1){
     let audio = new Audio('assets/lose.wav')
     audio.play();
+    answer.innerText = "Press Any Key To Play Again";
     attempts.innerText = 0; 
-    answer.innerText = ""; 
     document.querySelector('#img').src = 'assets/images/sun5.jpg';
-    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU HAVE BEEN VAPORIZED!</h1><h2>Press Any Key To Play Again</h2></div>';
+    result.innerHTML = '<div class="text-white text-center p-5"><h1>YOU HAVE BEEN VAPORIZED!</h1></div>';
     document.removeEventListener('keyup', addLetter);
     document.addEventListener('keyup', startGame);
   } else if(life < 7 && life > 4){
